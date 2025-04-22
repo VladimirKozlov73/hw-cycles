@@ -33,7 +33,7 @@ public class Main {
         //Задача 5
         System.out.println("Задача 5");
         for (int i = 1904; i <= 2096; i = i + 4) {
-            System.out.println(i);
+            System.out.println(i + " год является високосным.");
         }
         System.out.println();
 
@@ -63,10 +63,11 @@ public class Main {
 
         //Задача 9
         System.out.println("Задача 9");
-        total = 0;
+        double accumulation = 0;
         for (int i = 1; i <= 12; i++) {
-            total = total + total / 100 + salary;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
+            accumulation *= 1.01;
+            accumulation += salary;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + accumulation + " рублей");
         }
         System.out.println();
 
